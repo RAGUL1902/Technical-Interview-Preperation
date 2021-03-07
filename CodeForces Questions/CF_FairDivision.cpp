@@ -17,36 +17,41 @@ typedef long long int ll;
 #define int ll
 
 void solve(){
-    int w,h,n,count1=0,count2=0;
-    cin>>w>>h>>n;
-    if(n==1)
+    int n;
+    cin>>n;
+    int arr[n];
+    forf(i,0,n) cin>>arr[i];
+    int count1=0,count2=0;
+    forf(i,0,n)
     {
-        cout<<"YES"<<nl;
+        arr[i] == 1?count1++:count2++;
     }
-    else
+    int flag =0;
+    if(count1%2 == 0) 
     {
-        while(h%2 == 0)
+        if(count1 == 0)
         {
-            count1 += 1;
-            h = h/2;
-        }
-        while(w%2 == 0)
+        if(count2 % 2 == 0)
         {
-            count2 += 1;
-            w = w/2;
-        }
-        
-        if((pow(2,(count1+count2)))>= n) 
-        {
-            cout<<"YES"<<nl;
-        }
+        cout<<"YES"<<nl;}
         else
         {
             cout<<"NO"<<nl;
         }
+        }
+        else
+        {
+            cout<<"YES"<<nl;
+        }
+        
         
     }
+    else
+    {
+        cout<<"NO"<<nl;
+    }
     
+
 
 	}
 

@@ -31,7 +31,7 @@ int main()
         }
         else
         {
-            m[a] = make_pair(i,1);
+          m[a] = make_pair(i,1);
             
         }
         
@@ -45,7 +45,5 @@ int main()
     for(auto i: v)
     {
         cout<<i.first<<" ";
-    }
-
-    
+    }   
 }
