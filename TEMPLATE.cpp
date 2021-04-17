@@ -17,6 +17,7 @@ typedef long long int ll;
 #define int ll
 
 void solve(){
+	
 
 	}
 
@@ -28,9 +29,8 @@ double getCurrentTime() {
 
 signed main(){
  	ios_base::sync_with_stdio(false);
-    	cin.tie(NULL);
+    cin.tie(NULL);
 	//startTime = clock();
-	
 	int T;
 	cin >> T;
 	//T = 1;
