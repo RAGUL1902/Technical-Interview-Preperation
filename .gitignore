@@ -1,2 +1,4 @@
-#Ignore windows runtime executables.
 *.exe
+
+tempCodeRunnerFile.cpp
+
