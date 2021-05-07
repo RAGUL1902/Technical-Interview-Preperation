@@ -1,6 +1,10 @@
 #include <bits/stdc++.h>
 using namespace std;
 
+
+// #pragma GCC target ("avx2")
+// #pragma GCC optimization ("O3")
+// #pragma GCC optimization ("unroll-loops")
 #define MOD (1000000000 + 7)
 #define pb(x) push_back(x)
 #define mp(x, y) make_pair(x, y)
