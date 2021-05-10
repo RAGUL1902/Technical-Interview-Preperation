@@ -27,42 +27,28 @@ typedef long long int ll;
 
 void solve()
 {
-    int n, m;
-    cin>>n>>m;
-    int count =0;
-    vector<int> a,b;
+    int n,k;
+    cin>>n>>k;
+    vector<int> v1,v2;
     for(int i=0;i<n;i++){
         int temp;
         cin>>temp;
-        a.pb(temp);
+        v1.push_back(temp);
     }
-    for(int i=0;i<m;i++){
+    for(int i=0;i<n;i++){
         int temp;
         cin>>temp;
-        b.pb(temp);
+        v2.push_back(temp);
     }
-    int m1 = *max_element(a.begin(),a.end());
-    int m2 = *max_element(b.begin(),b.end());
-    int ele = max(m1,m2);
-    //cout<<ele;
-    for(int i = 1;i<=ele;i++){
-        bool one = true, two = true;
-        for(auto j:a){
-            if(i%j != 0){
-                one = false;
-                break;
-            }
+    sort(all(v1));
+    sort(all(v2),greater<int>());
+    for(int i =0;i<n;i++){
+        if(v1[i] + v2[i] < k){
+            cout<<"NO"<<nl;
+            return;
         }
-        for(auto j:b){
-            if(j%i != 0){
-                two = false;
-                break;
-            }
-        }
-        if(one and two)
-            count += 1;
     }
-    cout<<count;
+    cout<<"YES"<<nl;
 }
 
 clock_t startTime;
@@ -77,8 +63,8 @@ signed main()
 	cin.tie(NULL);
 	//startTime = clock();
 	int T;
-	//cin >> T;
-	T = 1;
+	cin >> T;
+	//T = 1;
 	while (T--)
 	{
 		solve();
