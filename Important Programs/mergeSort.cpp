@@ -1,53 +1,79 @@
 #include<bits/stdc++.h>
 using namespace std;
 
-void merge(int arr[],int l, int m, int r){
-    int n1 = m-l+1;
-    int n2 = r-m;
+void merge(int arr[], int l, int m, int r)
+{
+	// 2 3 4
+	// l m r --> l m  || m+1 r
+	//	l = 2 r = 4
+	//  m = 3
+	//  first array size = m+1-l second array size = (r+1) - (m+1)==> r-m;
+	int n1 = m + 1 - l;
+	int n2 = r - m;
+	int arr1[n1], arr2[n2];
 
-    int leftArray[n1], rightArray[n2];
-    int i=0,j=0,k=l;
+	cout<<"FIRST SUB ARRAY: ";
+	for (int i = 0; i < n1; i++)
+	{
+		arr1[i] = arr[i + l];
+		cout<<arr1[i]<<" ";
+	}
+	cout<<endl;
+	cout<<"SECOND SUB ARRAY: ";
+	for (int i = 0; i < n2; i++)
+	{
+		arr2[i] = arr[i + m + 1];
+		cout<<arr2[i]<<" ";
+	}
 
-    for(int i=0;i<n1;i++)
-        leftArray[i] = arr[l+i];
+	int i = 0;
+	int j = 0;
+	int k = l;
+	while (i < n1 and j < n2)
+	{
+		if (arr1[i] > arr2[j])
+		{
+			arr[k] = arr2[j];
+			j = j+1;
+		}
+		else
+		{
+			arr[k] = arr1[i];
+			i+= 1;
+		}
+		k+=1;
+	}
 
-    for(int i=0;i<n2;i++)
-        rightArray[i] = arr[m+1+i];
-
-    while (i<n1 && j<n2)
-    {
-        if(leftArray[i]<rightArray[j]){
-            arr[k] = leftArray[i];
-            i++;
-        }
-        else
-        {
-            arr[k] = rightArray[j];
-            j++;
-        }
-        k++;
-        
-    }
-    
-    while(i<n1){
-        arr[k] = leftArray[i];
-        i++;
-        k++; 
-    }
-    while(j<n2){
-        arr[k] = rightArray[j];
-        j++;
-        k++; 
-    }
+	while (i < n1)
+	{
+		arr[k] = arr1[i];
+		i++;
+		k++;
+	}
+	while (j < n2)
+	{
+		arr[k] = arr2[j];
+		j++;
+		k++;
+	}
+	cout<<endl<<"MAIN ARRAY: ";
+	for (int i = 0; i < 10; i++)
+	{
+		cout << arr[i] << " ";
+	}
+	cout<<endl;
+	cout<<endl;
 }
 
-void mergeSort(int arr[], int l, int r){
-    int m = l + (r-l)/2;
-    if(r>l){
-        mergeSort(arr,l,m);
-        mergeSort(arr,m+1,r);
-        merge(arr,l,m,r);
-    }
+void mergeSort(int arr[], int l, int r)
+{
+	if(r<=l){
+		return;
+	}
+	int m = (l + r) / 2;
+	mergeSort(arr, l, m);
+	mergeSort(arr, m + 1, r);
+	merge(arr, l, m, r);
 }
 
 int main(){
