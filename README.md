@@ -10,7 +10,7 @@ Files under the codeforces folders are solutions for the questions in codeforces
 
 ## 500 Important DSA Questions
 Files under the 500_Important_DSA_Questions are the program solutions for the 
- question in the website "https://blog.usejournal.com/500-data-structures-and-algorithms-practice-problems-35afe8a1e222".
+ question in the website https://blog.usejournal.com/500-data-structures-and-algorithms-practice-problems-35afe8a1e222.
 
 
 ## IET BFME PREP  
