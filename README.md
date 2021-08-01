@@ -7,7 +7,7 @@
 * Cracking the coding interview
 * I love DP
 * Competitive Programming
-* FINAL450 - 450 Imp DSA Ques
+* FINAL450 - 450 Imp DSA Questions
 
 
 ## Codechef Questions
