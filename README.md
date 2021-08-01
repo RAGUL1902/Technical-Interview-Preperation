@@ -1,5 +1,15 @@
 # DSA_CP_Questions
 
+## Important Files Included
+
+* 40+ Os Questions for Interviews - By Interviewbit
+* DBMS - Interview Questions - By Interviewbit
+* Cracking the coding interview
+* I love DP
+* Competitive Programming
+* FINAL450 - 450 Imp DSA Ques
+
+
 ## Codechef Questions
 
 Files under the codechef folder are solutions for the questions in the codechef platform. File names are their respective question code.
@@ -28,12 +38,3 @@ This folder has the solution programs for the question from this contest conduct
 ## Misc Questions
 
 Files under MISC Questions are few miscellaneous coding questions on DSA.
-
-## Important Files List
-
-* 40+ Os Questions for Interviews - By Interviewbit
-* DBMS - Interview Questions - By Interviewbit
-* Cracking the coding interview
-* I love DP
-* Competitive Programming
-* FINAL450 - 450 Imp DSA Ques
