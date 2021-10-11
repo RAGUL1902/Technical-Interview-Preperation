@@ -1,7 +1,6 @@
 #include <bits/stdc++.h>
 using namespace std;
 
-
 // #pragma GCC target ("avx2")
 // #pragma GCC optimization ("O3")
 // #pragma GCC optimization ("unroll-loops")
@@ -24,6 +23,20 @@ using namespace std;
 // template starts
 typedef long long int ll;
 #define int ll
+
+long long binpow(long long a, long long b, long long m)
+{
+	a %= m;
+	long long res = 1;
+	while (b > 0)
+	{
+		if (b & 1)
+			res = res * a % m;
+		a = a * a % m;
+		b >>= 1;
+	}
+	return res;
+}
 
 void solve()
 {
