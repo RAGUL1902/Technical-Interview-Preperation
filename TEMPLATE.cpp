@@ -1,9 +1,6 @@
 #include <bits/stdc++.h>
 using namespace std;
 
-// #pragma GCC target ("avx2")
-// #pragma GCC optimization ("O3")
-// #pragma GCC optimization ("unroll-loops")
 #define MOD (1000000000 + 7)
 #define pb(x) push_back(x)
 #define mp(x, y) make_pair(x, y)
@@ -38,29 +35,28 @@ long long binpow(long long a, long long b, long long m)
 	return res;
 }
 
+/* Use ordered map if unordered map blows up
+ * Look for overflow errors
+ * Think about corner casses once again
+ * Use setprecision() for float value outputs
+ * Use 0LL instead of 0
+ * Do endl after testcase
+ */
+
 void solve()
 {
-}
-
-clock_t startTime;
-double getCurrentTime()
-{
-	return (double)(clock() - startTime) / CLOCKS_PER_SEC;
 }
 
 signed main()
 {
 	ios_base::sync_with_stdio(false);
-	cin.tie(NULL);
-	//startTime = clock();
+	cin.tie(0);
+	cout.tie(0);
 	int T;
 	cin >> T;
-	//T = 1;
 	while (T--)
 	{
 		solve();
 	}
-
-	//cout << getCurrentTime() << endl;
 	return 0;
 }
