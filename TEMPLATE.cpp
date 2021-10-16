@@ -41,6 +41,11 @@ long long binpow(long long a, long long b, long long m)
  * Use setprecision() for float value outputs
  * Use 0LL instead of 0
  * Do endl after testcase
+ *
+ * <----------- IF TLE OCCURS ------------>
+ * Look at i++ and i-- in for loops
+ * check breaking cases of loops
+ * calculate time with question constraints
  */
 
 void solve()
