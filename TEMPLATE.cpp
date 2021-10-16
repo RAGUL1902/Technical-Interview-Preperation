@@ -35,7 +35,7 @@ long long binpow(long long a, long long b, long long m)
 	return res;
 }
 
-/* Use ordered map if unordered map blows up
+/*<------------ IF WA OCCURS ------------->
  * Look for overflow errors
  * Think about corner casses once again
  * Use setprecision() for float value outputs
@@ -43,6 +43,7 @@ long long binpow(long long a, long long b, long long m)
  * Do endl after testcase
  *
  * <----------- IF TLE OCCURS ------------>
+ * Use ordered map if unordered map blows up
  * Look at i++ and i-- in for loops
  * check breaking cases of loops
  * calculate time with question constraints
