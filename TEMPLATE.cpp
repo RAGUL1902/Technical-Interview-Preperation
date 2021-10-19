@@ -38,7 +38,7 @@ long long binpow(long long a, long long b, long long m)
 /*<------------ IF WA OCCURS ------------->
  * Look for overflow errors
  * Think about corner casses once again
- * Use setprecision() for float value outputs
+ * Include cout<<fixed<<setprecision(11); in main  for printing decimals
  * Use 0LL instead of 0
  * Do endl after testcase
  *
