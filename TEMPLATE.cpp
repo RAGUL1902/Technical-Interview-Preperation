@@ -35,6 +35,25 @@ long long binpow(long long a, long long b, long long m)
 	return res;
 }
 
+int power(int x, int y)
+{
+	int result = 1;
+	while (y > 0)
+	{
+		if (y % 2 == 0) // y is even
+		{
+			x = x * x;
+			y = y / 2;
+		}
+		else // y isn't even
+		{
+			result = result * x;
+			y = y - 1;
+		}
+	}
+	return result;
+}
+
 /*<------------ IF WA OCCURS ------------->
  * Look for overflow errors
  * Think about corner casses once again
